@@ -1,0 +1,27 @@
+{{- if .Values.producer.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producer
+spec:
+  replicas: {{ .Values.producer.replicas }}
+  selector:
+    matchLabels:
+      app: producer
+  template:
+    metadata:
+      labels:
+        app: producer
+    spec:
+      containers:
+        - name: producer
+          image: {{ .Values.producer.image }}
+          command: ["python"]
+          args: ["producer.py"]
+          env:
+            - name: KAFKA_BOOTSTRAP
+              value: {{ .Values.kafka.bootstrap }}
+            - name: KAFKA_TOPIC
+              value: {{ .Values.kafka.topic }}
+{{- end }}
+

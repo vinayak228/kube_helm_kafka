@@ -1,0 +1,14 @@
+kafka:
+  bootstrap: demo-kafka-bootstrap.kafka:9092
+  topic: events
+
+producer:
+  enabled: true
+  replicas: 1
+  image: kafka-producer:1.0
+
+consumer:
+  enabled: true
+  replicas: 1
+  image: kafka-consumer:1.0
+
