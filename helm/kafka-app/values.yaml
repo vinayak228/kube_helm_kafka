@@ -4,11 +4,11 @@ kafka:
 
 producer:
   enabled: true
-  replicas: 1
+  replicas: 0
   image: kafka-producer:1.0
 
 consumer:
   enabled: true
-  replicas: 2
+  replicas: 0
   image: kafka-consumer:1.0
 
