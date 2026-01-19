@@ -9,6 +9,6 @@ producer:
 
 consumer:
   enabled: true
-  replicas: 1
+  replicas: 2
   image: kafka-consumer:1.0
 

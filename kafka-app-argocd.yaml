@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/<your-username>/kafka-gitops
+    repoURL: https://github.com/vinayak228/kube_helm_kafka
     targetRevision: main
     path: helm/kafka-app
     helm:
